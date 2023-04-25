@@ -1,0 +1,5 @@
+{
+    "board": "arduino:mbed_nano:nano33ble",
+    "sketch": "sine/sine.ino",
+    "port": "/dev/ttyACM0"
+}
