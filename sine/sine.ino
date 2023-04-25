@@ -3,6 +3,7 @@
 
 // sine_model.h contains the array you exported from Python with xxd or tinymlgen
 #include "sine_model.h"
+#include "math.h"
 
 #define N_INPUTS 1
 #define N_OUTPUTS 1
@@ -32,8 +33,10 @@ void loop() {
         float x = 2 * 3.14 * i / 360;
         float input[1] = { x };
         float predicted = tf.predict(input);
-
-        Serial.println(predicted);
+        float actual = sin(x);
+        Serial.print(predicted);
+        Serial.print(",");
+        Serial.println(actual);
         delay(100);
     }
 
